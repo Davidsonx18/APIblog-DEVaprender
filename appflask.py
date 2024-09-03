@@ -5,7 +5,7 @@ import jwt
 from datetime import datetime,timedelta,timezone
 from functools import wraps
 # Rota padrão - GET https://localhost:5000
-
+#comentario
 def token_obrigatorio(f):
     @wraps(f)
     def decorated(*args,**kwargs):
