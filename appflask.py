@@ -114,7 +114,7 @@ def excluir_postagem(id_postagem):
 
 @app.route('/autores')
 @token_obrigatorio
-def obter_autores():
+def obter_autores(autor):
     autores = Autor.query.all()
     lista_de_autores = []
     for autor in autores:
