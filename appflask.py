@@ -12,7 +12,7 @@ def token_obrigatorio(f):
         token = None
         #Verificar se um token foi enviado
         if 'x-access-token' in request.headers:
-            request.headers['x-access-token']
+            token = request.headers['x-access-token']
         if not token:
             return jsonify({'Mensagem':'Token não foi incluido!'},401)
         #Se temos um token, validar acesso consultando o BD
